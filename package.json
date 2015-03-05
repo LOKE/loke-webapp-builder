@@ -1,0 +1,20 @@
+{
+  "name": "express-app-builder",
+  "version": "1.0.0",
+  "description": "Build web applications and APIs in the LOKE standard way",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Den Williams",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.12.0",
+    "error-builder": "^1.1.0",
+    "express": "^4.11.2",
+    "merge": "^1.2.0",
+    "node-uuid": "^1.4.2",
+    "on-finished": "^2.2.0",
+    "q": "^1.1.2"
+  }
+}
