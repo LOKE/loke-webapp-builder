@@ -1,6 +1,6 @@
 {
   "name": "loke-webapp-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Build web applications and APIs in the LOKE standard way",
   "main": "index.js",
   "scripts": {
