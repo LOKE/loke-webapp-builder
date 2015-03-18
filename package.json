@@ -1,5 +1,5 @@
 {
-  "name": "express-app-builder",
+  "name": "loke-webapp-builder",
   "version": "1.0.0",
   "description": "Build web applications and APIs in the LOKE standard way",
   "main": "index.js",
