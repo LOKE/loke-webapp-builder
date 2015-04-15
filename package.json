@@ -17,5 +17,8 @@
     "node-uuid": "^1.4.2",
     "on-finished": "^2.2.0",
     "q": "^1.1.2"
+  },
+  "devDependencies": {
+    "supertest": "^0.15.0"
   }
 }
