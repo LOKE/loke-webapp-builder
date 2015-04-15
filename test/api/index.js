@@ -21,3 +21,9 @@ describe('Session Managers & Authorization', function() {
   require('./sessions');
 
 });
+
+describe('CORS', function() {
+
+  require('./cors');
+
+});

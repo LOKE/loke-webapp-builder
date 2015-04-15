@@ -1,4 +1,4 @@
-var controller = require('./controller');
+var controller = require('./controller').default;
 var request = require('supertest');
 
 it('should return 401 if auth fails', function (done) {

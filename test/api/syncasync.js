@@ -1,4 +1,4 @@
-var controller = require('./controller');
+var controller = require('./controller').default;
 var request = require('supertest');
 
 it('should work with SYNC methods', function (done) {

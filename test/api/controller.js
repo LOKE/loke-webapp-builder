@@ -1,13 +1,23 @@
 var Q = require('q');
 var builder = require('../../lib');
-var controller = builder.createApiController({sessionManager:getSessionManager()})
+
+function create(opts) {
+  opts = opts || {};
+  var apiOpts = {};
+  if (opts.sessionManager) {
+    apiOpts.sessionManager = getSessionManager();
+  }
+  if (opts.cors) {
+    apiOpts.cors = true;
+  }
+  console.log(apiOpts);
+  return builder.createApiController(apiOpts)
     .get('/route1', route1)
     .get('/route2', route2)
     .get('/err1', err1)
     .get('/err2', err2)
     .done();
-
-module.exports = controller;
+}
 
 
 function route1() {
@@ -39,3 +49,6 @@ function getSessionManager() {
     getSession: require('./session').getSession
   };
 }
+
+exports.create = create;
+exports.default = create({sessionManager:true});
