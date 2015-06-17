@@ -10,7 +10,7 @@ function create(opts) {
   if (opts.cors) {
     apiOpts.cors = true;
   }
-  console.log(apiOpts);
+
   return builder.createApiController(apiOpts)
     .get('/route1', route1)
     .get('/route2', route2)
