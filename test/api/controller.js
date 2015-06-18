@@ -20,7 +20,7 @@ function create(opts) {
 }
 
 
-function route1() {
+function route1(req, session) {
   return {route:'route1'};
 }
 
