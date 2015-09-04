@@ -27,3 +27,9 @@ describe('CORS', function() {
   require('./cors');
 
 });
+
+describe('Method Override', function() {
+
+  require('./methodoverride');
+
+});
