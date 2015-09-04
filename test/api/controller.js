@@ -16,6 +16,7 @@ function create(opts) {
     .get('/route2', route2)
     .get('/err1', err1)
     .get('/err2', err2)
+    .patch('/patch1', patch1)
     .done();
 }
 
@@ -34,6 +35,10 @@ function route2() {
 
 function err1() {
   throw new Error('Err1');
+}
+
+function patch1() {
+  return {route:'patch1'};
 }
 
 function err2() {
