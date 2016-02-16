@@ -92,7 +92,7 @@ var routeHandler2 = function(req) {
 
 ### Extended Route Handlers
 
-Route handles also have access to session information, and global context information. 
+Route handles also have access to session information, and global context information.
 
 The full function signature is ```function(req, session, ctx)``` where `session` is the authenticated users session object (see Session Managers below), and `ctx` is the optional controller context supplied on controller creation (see Controller Context below).
 
@@ -221,7 +221,7 @@ var controller = builder.createApiController(opts, ctx)
 ```js
 module.exports = function(req, session, ctx) {
   var config = ctx.config;
-  var db = services.db; 
+  var db = services.db;
 };
 ```
 
@@ -239,15 +239,15 @@ A request ID is provided with the request metadata, and a session is also attach
 
 ### Request Logger
 
-Function signature ```function(req, session)```
+Function signature ```function(err, status, req, session, cid)```
 
 TODO: this should probably actually be done at the end so the status code can be included.
 
 To include a request logger in a controller:
 
 ```js
-var logger = function(meta, session) {
-    console.log('Request:', meta);
+var logger = function(err, status, req, session, cid) {
+    console.log('Request ['+status+'] ');
 };
 
 var controller = builder.createApiController({
@@ -258,7 +258,7 @@ var controller = builder.createApiController({
 
 ### Error Logger
 
-Function signature ```function(err, req, session)```
+Function signature ```function(err, req, session, cid)```
 
 Where err is the resulting error.
 
