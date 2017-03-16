@@ -210,7 +210,7 @@ You provide the optional context object as the second argument when creating a c
 ```
 var ctx = {
   config: getConfig(),
-  db: getDbRepos()  
+  db: getDbRepos()
 };
 
 var controller = builder.createApiController(opts, ctx)
@@ -239,7 +239,7 @@ A request ID is provided with the request metadata, and a session is also attach
 
 ### Request Logger
 
-Function signature ```function(err, status, req, session, cid)```
+Function signature ```function(err, {status, req, session, cid, duration, method, path, route})```
 
 TODO: this should probably actually be done at the end so the status code can be included.
 
